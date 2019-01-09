@@ -1,0 +1,24 @@
+﻿@model Dogs.Entities.Dog
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Edit</title>
+    </head>
+    <body>
+        <div>
+            <form action="/Home/Edit" method="post">
+                <input type="hidden" value="@Model.Id" name="Id" />
+                Name:<input type="text" value="@Model.Name" name="Name" /><br />
+                Type:<input type="text" value="@Model.Type" name="Type" /><br />
+                Age:<input type="text" value="@Model.Age" name="Age" /><br />
+                <input type="submit" name="Save" />
+            </form>
+        </div>
+    </body>
+</html>
